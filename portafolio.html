@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Web | Manuel Fraga</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #e0f7fa, #ffffff);
+            transition: background 0.5s ease;
+            animation: backgroundScroll 20s linear infinite;
+        }
+
+        @keyframes backgroundScroll {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .section {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body.dark-mode {
+            background: linear-gradient(120deg, #0a0a0a, #1a1a1a);
+        }
+
+        body.dark-mode .section h2,
+        body.dark-mode .study h3,
+        body.dark-mode .skill span,
+        body.dark-mode #contact a,
+        body.dark-mode p {
+            color: #cceeff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MANUEL FRAGA</h1>
+            <button id="toggle-theme">🌙</button>
+        </header>
+
+        <div class="section" id="profile">
+            <img src="manu.jpg" alt="Foto de perfil" id="profile-img">
+            <h2>Sobre mí</h2>
+            <p>Soy un estudiante con 4 años de experiencia en informática, con conocimientos sólidos en HTML, CSS, JavaScript y otras tecnologías. Me apasiona explorar nuevas herramientas y funciones para mejorar mis proyectos y desarrollar soluciones creativas. Aunque aún me queda mucho por aprender, considero que eso es lo que hace este camino tan emocionante. En mi tiempo libre, disfruto de los videojuegos, las películas, las series y la música, lo que también alimenta mi creatividad.</p>
+        </div>
+
+        <div class="section" id="experience">
+            <h2>Experiencia laboral</h2>
+            <div class="study">
+                <h3>Servicio de Limpieza (Proyecto Familiar)</h3>
+                <p>Realizo labores de limpieza en una casa en alquiler, enfocándome principalmente en los exteriores. Mis responsabilidades incluyen limpiar vidrios, quitar barro, cortar el pasto y recoger la basura. Este proyecto es llevado a cabo en conjunto con mi familia, ya que la casa es de nuestra propiedad y la alquilamos a terceros.</p>
+            </div>
+            <div class="study">
+                <h3>Empleado de Food Truck</h3>
+                <p>Trabajé como empleado en un food truck, donde asumí diversas responsabilidades. Me encargaba de tomar los pedidos de los clientes, preparar la comida (como papas, hamburguesas, panchos y otros platos), y entregar el pedido al cliente. Además, verificaba los pagos y realizaba tareas de limpieza tanto dentro como fuera del truck. Este trabajo lo compartía con un compañero (Tomi), quien también era empleado y me ayudaba en las diversas tareas.</p>
+            </div>
+        </div>
+
+        <div class="section" id="education">
+            <h2>Formación Académica</h2>
+            <div class="study">
+                <h3>Escuela Primaria</h3>
+                <p>Jorge Vocos Lescano (2013 - 2018)</p>
+            </div>
+            <div class="study">
+                <h3>Escuela Secundaria (ACTUAL)</h3>
+                <p>Instituto Parroquial El Obraje (2019 - 2025)</p>
+            </div>
+        </div>
+
+        <div class="section" id="skills">
+            <h2>Habilidades</h2>
+            <div class="skill">
+                <span>HTML</span>
+                <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+            </div>
+            <div class="skill">
+                <span>CSS</span>
+                <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+            </div>
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+            </div>
+            <div class="skill">
+                <span>Backend (otros)</span>
+                <div class="skill-bar"><div class="skill-level" style="width: 60%"></div></div>
+            </div>
+        </div>
+
+        <div class="section" id="languages">
+            <h2>Idiomas</h2>
+            <div class="skill">
+                <span>Español (Nativo)</span>
+                <div class="skill-bar"><div class="skill-level" style="width: 100%"></div></div>
+            </div>
+            <div class="skill">
+                <span>Inglés (Nivel medio)</span>
+                <div class="skill-bar"><div class="skill-level" style="width: 60%"></div></div>
+            </div>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Contacto</h2>
+            <p>📧 <a href="mailto:mfraga745@gmail.com">mfraga745@gmail.com</a></p>
+            <p>📞 +54 9 3547 63 0838</p>
+            <p>🔗 <a href="https://github.com/manuf017" target="_blank">Github-manuf017</a></p>
+            <p>📸 <a href="https://instagram.com/_manufragaa_" target="_blank">Instagram-_manufragaa_</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeButton = document.getElementById("toggle-theme");
+            themeButton.addEventListener("click", function() {
+                document.body.classList.toggle("dark-mode");
+                themeButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+            });
+        });
+    </script>
+</body>
+</html>

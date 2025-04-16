@@ -1,0 +1,158 @@
+/* Estilos mejorados para el portafolio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #ffffff);
+    color: #333;
+    padding: 20px;
+    transition: background 0.5s ease, color 0.5s ease;
+    animation: backgroundScroll 20s linear infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes backgroundScroll {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.section {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#profile {
+    text-align: center;
+}
+
+#profile-img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #007BFF;
+}
+
+.study, .skill {
+    margin-bottom: 20px;
+}
+
+.study h3, .skill span {
+    font-weight: 600;
+    color: #007BFF;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.skill-bar {
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 12px;
+}
+
+.skill-level {
+    height: 12px;
+    background-color: #007BFF;
+    width: 0;
+    animation: growSkill 1.5s ease forwards;
+}
+
+@keyframes growSkill {
+    to { width: var(--skill-width); }
+}
+
+body.dark-mode {
+    background: linear-gradient(120deg, #0a0a0a, #1a1a1a);
+    color: #cceeff;
+}
+
+body.dark-mode .container {
+    background: #2a2a2a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .section {
+    background: #333;
+}
+
+body.dark-mode .section h2,
+body.dark-mode .study h3,
+body.dark-mode .skill span,
+body.dark-mode #contact a,
+body.dark-mode p,
+body.dark-mode header h1 {
+    color: #cceeff;
+}
+
+body.dark-mode button {
+    background-color: #cceeff;
+    color: #1a1a1a;
+}
+
+body.dark-mode button:hover {
+    background-color: #aaddff;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.skill-level[style] {
+    animation: none;
+}
